@@ -263,7 +263,7 @@ class COCOeval:
             return None
 
         for g in gt:
-            if g['ignore'] or (g['area'] < aRng[0] or g['area'] > aRng[1]):
+            if g['ignore'] or (g['area'] <= aRng[0] or g['area'] > aRng[1]):
                 g['_ignore'] = 1
             else:
                 g['_ignore'] = 0
